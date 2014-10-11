@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 public class Waked {
 	public static void main(final String[] args){
 		logger.info("Starting up...");
-		logger.info("Creating config folder...");
+		logger.info("Looking for config folder...");
 		File home = new File(getAppData());
 		File settingsDirectory = new File(home, "Waked");
 		if(!settingsDirectory.exists()) {
@@ -47,6 +47,7 @@ public class Waked {
 		}else{
 			logger.info("MAC Address: "+MACAddress);
 		}
+		return;
 		/*Map<String,String> mapA = new HashMap<>();
 
 		mapA.put("port", port);
