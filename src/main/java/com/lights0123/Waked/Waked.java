@@ -41,6 +41,12 @@ public class Waked {
 			logger.info("Port 7 mapped successfully!");
 			port=7;
 		}
+		String MACAddress=HTTPManager.getMACAddress();
+		if(MACAddress==null){
+			logger.warning("MAC Address is null!");
+		}else{
+			logger.info("MAC Address: "+MACAddress);
+		}
 		/*Map<String,String> mapA = new HashMap<>();
 
 		//mapA.put("key1", "element 1");
@@ -61,4 +67,5 @@ public class Waked {
 		}
 		return System.getProperty("user.dir");
 	}
+
 }

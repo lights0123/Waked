@@ -1,13 +1,7 @@
 package com.lights0123.Waked;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
+import java.io.*;
+import java.net.*;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -78,5 +72,35 @@ public class HTTPManager {
 				connection.disconnect();
 			}
 		}
+	}
+	public static String getMACAddress(){
+		InetAddress ip;
+		try {
+
+			ip = InetAddress.getLocalHost();
+			System.out.println("Current IP address : " + ip.getHostAddress());
+
+			NetworkInterface network = NetworkInterface.getByInetAddress(ip);
+
+			byte[] mac = network.getHardwareAddress();
+
+			System.out.print("Current MAC address : ");
+
+			StringBuilder sb = new StringBuilder();
+			for (int i = 0; i < mac.length; i++) {
+				sb.append(String.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : ""));
+			}
+			return sb.toString();
+
+		} catch (UnknownHostException e) {
+
+			e.printStackTrace();
+
+		} catch (SocketException e){
+
+			e.printStackTrace();
+
+		}
+		return null;
 	}
 }
