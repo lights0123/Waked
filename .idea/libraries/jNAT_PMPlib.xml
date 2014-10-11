@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jNAT-PMPlib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jNAT-PMPlib.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/lib/javadoc" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
