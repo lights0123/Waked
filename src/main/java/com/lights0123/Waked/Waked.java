@@ -49,10 +49,9 @@ public class Waked {
 		}
 		/*Map<String,String> mapA = new HashMap<>();
 
-		//mapA.put("key1", "element 1");
-		//mapA.put("key2", "element 2");
-		//mapA.put("key3", "element 3");
-		HTTPManager.HTTPSend("http://github.com", mapA);*/
+		mapA.put("port", port);
+		mapA.put("MAC", MACAddress);
+		HTTPManager.HTTPSend("http://github.com")*/
 	}
 	private final static Logger logger = Logger.getLogger(Waked.class.getName());
 	public static String getAppData(){
